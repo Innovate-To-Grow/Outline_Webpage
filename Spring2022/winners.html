@@ -1,0 +1,473 @@
+<title></title>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<!-- Schedule -->
+<style type="text/css">
+
+
+button {
+    padding-left: 0px;
+}
+
+@media (min-width: 200px){
+    .row-fluid .span10 {
+    width: 85% !important;
+	padding-left: 50px;
+	}   
+}
+
+@media (min-width: 200px){
+    .row-fluid .span2 {
+    width: 14% !important;
+	}   
+}
+</style>
+<style type="text/css">@media (max-width: 200px) {
+	[class*="span"], .uneditable-input[class*="span"], .row-fluid .i2gTable [class*="span"] {
+		display: block;
+		width: 100%;
+		margin-left: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+.table__wrapper {
+  width: 100%;
+}
+
+.table__wrapper .table {
+  max-width: 100%;
+} 
+
+/* ------- Presentational Formatting --------- */
+
+.center {
+  margin: 0 auto;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table tr {
+  border-bottom: 1px solid white;
+}
+
+.table thead tr {
+  border-bottom: 2px solid white;
+  background: #d9d9d9;
+}
+	
+.table thead tr:nth-child(3) {
+  background:#d9d9d9;	
+}
+
+.borderLess {
+  border-bottom: 1px solid white;
+  max-width: 100px;
+}
+
+.table td,
+.table th {
+  padding: .5em;
+}
+
+.table th {
+  text-align: left;
+}
+
+@media screen and (max-width:200px) {
+  .table {
+    margin: 0 auto;
+    width: 100%;
+    border-spacing: 0;
+	background-color: #f0f0f0;
+  }
+  .table thead {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+  .borderLess {
+  border-bottom: 2px solid #f0f0f0;
+  }
+  .table tbody,
+  .table tr,
+  .table th,
+  .table td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+  .table tr td,
+  .table tr th {
+    padding: 2em 1em;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    border-top: none;
+    white-space: normal;
+
+  }
+  .table th[scope="row"] {
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: #5b5b5b;
+    margin: 0 auto;
+    padding: .5em 0;
+  }
+  .table td[data-header]:before {
+    content: attr(data-header);
+    display: block;
+    float: left;
+    color: #002856;
+	  width: 30%;
+    font-weight: bold;
+    text-align: left;
+	  margin-bottom: 0px;
+  }
+  .table td[data-header] > * {
+    display: block;
+    width: 48%;
+    float: right;
+    clear: right;
+    padding-left: 1em;
+    margin-top: 0;
+  }
+  .table td[data-header]:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    color: #5b5b5b;
+    border-right: 1px solid #EDF0F1;
+    display: block;
+  }
+}
+
+/* Full Screen */
+@media screen and (min-width:200px){
+
+/* Coloring of the Columns (CAP) */
+.capTable tr td:nth-child(2) {
+	background: rgba(218, 169, 0, 0.90);;
+	min-width: 100px;
+	max-width: 160px;
+}
+.capTable tr td:nth-child(3) {
+	background: rgba(218, 169, 0, 0.80);
+	min-width: 100px;
+	max-width: 160px;
+}
+.capTable tr td:nth-child(4) {
+	background: rgba(218, 169, 0, 0.70);
+	min-width: 100px;
+	max-width: 160px;
+}
+.capTable tr td:nth-child(5) {
+	background: rgba(218, 169, 0, 0.60);
+	min-width: 100px;
+	max-width: 160px;
+}
+.capTable tr td:nth-child(6) {
+	background: rgba(218, 169, 0, 0.50);
+	min-width: 100px;
+	max-width: 160px;
+}
+.capTable tr td:nth-child(7) {
+	background: rgba(218, 169, 0, 0.40);
+	min-width: 100px;
+	max-width: 160px;
+}
+
+/* Coloring of the Columns (CSE) */
+.cseTable tr td:nth-child(2) {
+	background: #002856;
+	min-width: 100px;
+	max-width: 160px;
+}
+.cseTable tr td:nth-child(3) {
+	background: #002856;
+	opacity: 0.95;
+	min-width: 100px;
+	max-width: 160px;
+}
+.cseTable tr td:nth-child(4) {
+	background: #002856;
+	opacity: 0.90;
+	min-width: 100px;
+	max-width: 160px;
+}
+.cseTable tr td:nth-child(5){
+	background: #002856;
+	opacity: 0.85;
+	min-width: 100px;
+	max-width: 160px;
+}
+
+/* Coloring of the Columns (EngSL) */
+.engslTable tr td:nth-child(2) 
+{
+  background: #99D9D9;
+  max-width: 120px;
+}
+}
+
+@media screen and (max-width: 200px){
+/* Coloring of the Columns (CAP) */
+.capTable tr td:nth-child(2) {
+	background: #DAA900;
+}
+.capTable tr td:nth-child(3){
+	background: rgba(218, 169, 0, 0.90);
+}
+.capTable tr td:nth-child(4) {
+	background: rgba(218, 169, 0, 0.80);
+}
+.capTable tr td:nth-child(5) {
+	background: rgba(218, 169, 0, 0.70);
+}
+.capTable tr td:nth-child(6) {
+	background: rgba(218, 169, 0, 0.60);
+}
+.capTable tr td:nth-child(7) {
+	background: rgba(218, 169, 0, 0.50);
+}
+
+/* Coloring of the Columns (CSE) */
+.cseTable tr td:nth-child(2) {
+	background: #002856;
+}
+.cseTable tr td:nth-child(3) {
+	background: #002856;
+	opacity: 0.90;
+}
+.cseTable tr td:nth-child(4) {
+	background: #002856;
+	opacity: 0.80;
+}
+.cseTable tr td:nth-child(5){
+	background: #002856;
+	opacity: 0.70;
+}
+
+/* Coloring of the Columns (EngSL) */
+.engslTable tr td:nth-child(2) 
+{
+  background: #99D9D9;
+}
+
+
+}
+
+@media screen and (max-width: 200px) {
+  .center {
+    width: 100%;
+  }
+}
+
+/* Entire cell as a button */
+
+
+th {
+    border-bottom: 0;
+}
+
+.table th, .table td {
+
+    border-top: 1px solid #fff;
+}
+</style>
+<!-- MAIN SCRIPTS FOR PULLING SPREADSHEET DATA --><script>
+    $(document).ready(function () {
+        // Pulls the winner column from "2022-01-Spring-I2G-MASTER" spreadsheet.
+		// .winnert1 means its the class for winner track 1. row x column 6 is the item in the winner column
+       $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1ByRYKwPkrD4edUVyd3hw3nTDY31ygyyx0QZOANF2vyc/values/I2G-Tracks?alt=json&key=AIzaSyDWhIC7QQal9etKiwUDzs34yugQR0KqS94", function (data) {
+           $(".winnert1").prepend(data.values[2][6]); 
+           $(".winnert2").prepend(data.values[3][6]);
+           $(".winnert3").prepend(data.values[4][6]);
+           $(".winnert4").prepend(data.values[5][6]);
+           $(".winnert5").prepend(data.values[6][6]);
+           $(".winnert6").prepend(data.values[7][6]);
+           $(".winnert7").prepend(data.values[8][6]);
+           $(".winnert8").prepend(data.values[9][6]);
+           $(".winnert9").prepend(data.values[10][6]);
+           $(".winnert10").prepend(data.values[11][6]);
+           $(".winnert11").prepend(data.values[12][6]);
+    });
+   });
+</script>
+<div class="row-fluid i2gTable ">
+	<div class="capTable">
+		<div class="span12">
+			<div style="text-align: center;">&nbsp;</div>
+
+			<div style="text-align: center;"><span style="font-size:28px;"><strong><span style="color:#c0392b;">Winners!&nbsp; Innovate to Grow - Spring 2022</span></strong></span></div>
+
+			<div>&nbsp;</div>
+
+			<div style="text-align: center; color: #002856;"><strong>Engineering Capstone (CAP)</strong></div>
+
+			<section class="center">
+				<div class="table__wrapper">
+					<table class="table" style="width: 100%;">
+						<thead>
+							<tr>
+								<th scope="col" style="background-color: #fff;">&nbsp;</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 1</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 2</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 3</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 4</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th style="background-color: #fff;">&nbsp;</th>
+								<td data-header="Track 1" style="color: #002856;">
+									<p style="color:#002856; font-weight: bolder;">AgTech</p>
+								</td>
+								<td data-header="Track 2" style="color: #002856;">
+									<p style="color:#002856; font-weight: bolder;">Process</p>
+								</td>
+								<td data-header="Track 3" style="color: #002856;">
+									<p style="color:#002856; font-weight: bolder;"><b>Safety</b></p>
+								</td>
+								<td data-header="Track 4" style="color: #002856;">
+									<p style="color:#002856; font-weight: bolder;"><b>System</b></p>
+								</td>
+								<td data-header="Track 5" style="color: #002856;">
+									<p style="color:#002856; font-weight: bolder;"><b>Waste</b></p>
+								</td>
+							</tr>
+							<tr>
+								<th class="borderLess" scope="row" style="background-color: #fff; color: #002856;">&nbsp;</th>
+								<td data-header="Track 1"><b class="winnert1">&nbsp;</b></td>
+								<td data-header="Track 2"><b class="winnert2">&nbsp;</b></td>
+								<td data-header="Track 3"><b class="winnert3">&nbsp;</b></td>
+								<td data-header="Track 4"><b class="winnert4">&nbsp;</b></td>
+								<td data-header="Track 5"><b class="winnert5">&nbsp;</b></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+
+<div class="row-fluid i2gTable ">
+	<div class="engslTable">
+		<div class="span2" style="margin-right: 0px;">
+			<div style="text-align: center; color: #002856;"><strong>CEE + EngSL</strong></div>
+
+			<section class="center">
+				<div class="table__wrapper">
+					<table class="table" style="width: 100%; margin-bottom: 0px">
+						<thead>
+							<tr>
+								<th scope="col" style="background-color: #fff; max-width: 70px;">&nbsp;</th>
+								<th scope="col" style="background-color: #efefef; color: #002856; max-width: 150px;">Track 6</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="borderLess" scope="row" style="background-color: #fff; color: #002856;">&nbsp;</th>
+								<td data-header="Track 6">
+									<p style="color: #002856;"><b>Environment (CEE)</b></p>
+								</td>
+							</tr>
+							<tr>
+								<th class="borderLess" scope="row" style="background-color: #fff; color: #002856;">&nbsp;</th>
+								<td data-header="Track 6"><b class="winnert6">&nbsp;</b></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="table" style="width: 100%;">
+						<thead>
+							<tr>
+								<th scope="col" style="background-color: #fff; max-width: 70px;">&nbsp;</th>
+								<th scope="col" style="background-color: #efefef; color: #002856; max-width: 150px;">Track 7</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="borderLess" scope="row" style="background-color: #fff; color: #002856;">&nbsp;</th>
+								<td data-header="Track 7" style="background-color: #5B5B5B; color: #FFBF3C;">
+									<p style="color: #FFBF3C;"><b>Service Learning</b></p>
+								</td>
+							</tr>
+							<tr>
+								<th class="borderLess" scope="row" style="background-color: #fff; color: #002856;">&nbsp;</th>
+								<td data-header="Track 7" style="background-color: #5B5B5B; color: #FFBF3C;"><b class="winnert7">&nbsp;</b></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="cseTable">
+		<div class="span10">
+			<div>&nbsp;</div>
+
+			<div style="text-align: center; color: #002856;"><strong>Software Engineering Capstone (CSE)</strong></div>
+
+			<section class="center">
+				<div class="table__wrapper">
+					<table class="table" style="width: 100%;">
+						<thead>
+							<tr>
+								<th scope="col" style="background-color: #fff; color: #002856; max-width: 100px;">&nbsp;</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 8</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 9</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 10</th>
+								<th scope="col" style="background-color: #efefef; color: #002856;">Track 11</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="borderLess" scope="row" style="background-color: #fff; color: #002856;">&nbsp;</th>
+								<td data-header="Track 8" style="color: #FFBF3C;">
+									<p style="color: #FFBF3C;"><b>Code</b></p>
+								</td>
+								<td data-header="Track 9" style="color: #FFBF3C;">
+									<p style="color: #FFBF3C;"><b>Computer</b></p>
+								</td>
+								<td data-header="Track 10" style="color: #FFBF3C;">
+									<p style="color: #FFBF3C;"><b>Data</b></p>
+								</td>
+								<td data-header="Track 11" style="color: #FFBF3C;">
+									<p style="color: #ffbf3c;"><b>User</b></p>
+								</td>
+							</tr>
+							<tr>
+								<th class="borderLess" scope="row" style="background-color: #fff; color: #002856;">&nbsp;</th>
+								<td data-header="Track 8" style="color: #FFBF3C;"><b class="winnert8">&nbsp;</b></td>
+								<td data-header="Track 9" style="color: #FFBF3C;"><b class="winnert9">&nbsp;</b></td>
+								<td data-header="Track 10" style="color: #FFBF3C;"><b class="winnert10">&nbsp;</b></td>
+								<td data-header="Track11" style="color: #FFBF3C;"><b class="winnert11">&nbsp;</b></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>&nbsp;</p>
+
+					<p>&nbsp;</p>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
