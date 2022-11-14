@@ -724,13 +724,13 @@ COPY CODE FROM HOME PAGE BUTTON TO SCHEDULE
        $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1L3fgZFAWnwXbRqn2Gt8Qf14-MCGxB46KZ3lfWe1a5ps/values/I2G-Tracks?alt=json&key=AIzaSyDWhIC7QQal9etKiwUDzs34yugQR0KqS94", function (data) {
            $(".roomt1").prepend(data.values[2][1]);
            $(".roomt2").prepend(data.values[3][1]);
-           //$(".roomt3").prepend(data.values[4][1]);
-           //$(".roomt4").prepend(data.values[5][1]);
-           //$(".roomt5").prepend(data.values[6][1]);
+           $(".roomt3").prepend(data.values[4][1]);
+           $(".roomt4").prepend(data.values[5][1]);
+           $(".roomt5").prepend(data.values[6][1]);
            // $(".roomt6").prepend(data.values[7][1]); (this is commented out since track 6 and 7 share the same room)
-           $(".roomt7").prepend(data.values[4][1]);
-           $(".roomt8").prepend(data.values[5][1]);
-           $(".roomt9").prepend(data.values[6][1]);
+           // $(".roomt7").prepend(data.values[4][1]);
+           // $(".roomt8").prepend(data.values[5][1]);
+           // $(".roomt9").prepend(data.values[6][1]);
            //$(".roomt10").prepend(data.values[11][1]);
            //$(".roomt11").prepend(data.values[12][1]);
            let counter = 1;
@@ -905,11 +905,11 @@ COPY CODE FROM HOME PAGE BUTTON TO SCHEDULE
 						<thead>
 							<tr>
 								<th scope="col" style="background-color: #efefef; color: #002856; max-width: 70px;">Room:</th>
-								<th class="roomt7" scope="col" style="background-color: #efefef; color: #002856; max-width: 150px; font-weight: normal; text-align: center;">&nbsp;</th>
+								<th class="roomt3" scope="col" style="background-color: #efefef; color: #002856; max-width: 150px; font-weight: normal; text-align: center;">&nbsp;</th>
 							</tr>
 							<tr>
 								<th scope="col" style="background-color: #efefef; max-width: 70px;"><gg-icon class="gg-camera" scope="col" style="align-content: center;"></gg-icon></th>
-								<th class="zoomborder" scope="col"><a class="zoom" id="zoomt7" scope="col" target="_blank" title="Zoom link activated 10 minutes before start!"><span><strong style="text-decoration: none;">Zoom 3</strong></span></a></th>
+								<th class="zoomborder" scope="col"><a class="zoom" id="zoomt3" scope="col" target="_blank" title="Zoom link activated 10 minutes before start!"><span><strong style="text-decoration: none;">Zoom 3</strong></span></a></th>
 							</tr>
 							<tr>
 								<th scope="col" style="background-color: #efefef; max-width: 70px;">&nbsp;</th>
@@ -922,14 +922,14 @@ COPY CODE FROM HOME PAGE BUTTON TO SCHEDULE
 						<tbody><!-- THIS IS THE CODE TO ADD CLICKABLE TEAMS AND NON CLICKABLE  - when the teams are finalized in the time slots --><!-- button id="slot71" onclick="passvalue('slot71')" style="color: #002856;" title="Team: -  Project: ">CEE??</button><p class="companyName"></p>-->
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">12:30</th>
-								<td data-header="Track 6" id="hover16"><button class="ceer1t6" id="slot16" onclick="passvalue('slot16')" style="color: #002856;"></button>
-									<p class="ceeorgr1t6 companyName">&nbsp;</p>
+								<td data-header="Track 3" id="hover13"><button class="ceer1t3" id="slot13" onclick="passvalue('slot13')" style="color: #002856;"></button>
+									<p class="ceeorgr1t3 companyName">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">1:00</th>
-								<td data-header="Track 6" id="hover26"><button class="ceer2t6" id="slot26" onclick="passvalue('slot26')" style="color: #002856;"></button>
-									<p class="ceeorgr2t6 companyName">&nbsp;</p>
+								<td data-header="Track 3" id="hover23"><button class="ceer2t3" id="slot23" onclick="passvalue('slot23')" style="color: #002856;"></button>
+									<p class="ceeorgr2t3 companyName">&nbsp;</p>
 								</td>
 							</tr>
 						</tbody>
@@ -950,13 +950,13 @@ COPY CODE FROM HOME PAGE BUTTON TO SCHEDULE
 						<thead>
 							<tr>
 								<th scope="col" style="background-color: #efefef; color: #002856; max-width: 100px;">Room:</th>
-								<th class="roomt8" scope="col" style="background-color: #efefef; color: #002856; font-weight: normal; text-align: center;">&nbsp;</th>
-								<th class="roomt9" scope="col" style="background-color: #efefef; color: #002856; font-weight: normal; text-align: center;">&nbsp;</th>
+								<th class="roomt4" scope="col" style="background-color: #efefef; color: #002856; font-weight: normal; text-align: center;">&nbsp;</th>
+								<th class="roomt5" scope="col" style="background-color: #efefef; color: #002856; font-weight: normal; text-align: center;">&nbsp;</th>
 							</tr>
 							<tr>
 								<th scope="col" style="background-color: #efefef; max-width: 100px;"><gg-icon class="gg-camera" scope="col" style="align-content: center;"></gg-icon></th>
-								<th class="zoomborder" scope="col"><a class="zoom" id="zoomt8" scope="col" target="_blank" title="Zoom link activated 10 minutes before start!"><span><strong style="text-decoration: none;">Zoom 4</strong></span></a></th>
-								<th class="zoomborder" scope="col"><a class="zoom" id="zoomt9" scope="col" target="_blank" title="Zoom link activated 10 minutes before start!"><span><strong style="text-decoration: none;">Zoom 5</strong></span></a></th>
+								<th class="zoomborder" scope="col"><a class="zoom" id="zoomt4" scope="col" target="_blank" title="Zoom link activated 10 minutes before start!"><span><strong style="text-decoration: none;">Zoom 4</strong></span></a></th>
+								<th class="zoomborder" scope="col"><a class="zoom" id="zoomt5" scope="col" target="_blank" title="Zoom link activated 10 minutes before start!"><span><strong style="text-decoration: none;">Zoom 5</strong></span></a></th>
 							</tr>
 							<tr>
 								<th scope="col" style="background-color: #efefef; color: #002856; max-width: 100px;">&nbsp;</th>
@@ -967,83 +967,83 @@ COPY CODE FROM HOME PAGE BUTTON TO SCHEDULE
 						<tbody>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">12:30</th>
-								<td data-header="Track 8" id="hover18"><button class="cser1t8" id="slot18" onclick="passvalue('slot18')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr1t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover14"><button class="cser1t4" id="slot14" onclick="passvalue('slot14')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr1t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover19"><button class="cser1t9" id="slot19" onclick="passvalue('slot19')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr1t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover15"><button class="cser1t5" id="slot15" onclick="passvalue('slot15')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr1t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">12:50</th>
-								<td data-header="Track 8" id="hover28"><button class="cser2t8" id="slot28" onclick="passvalue('slot28')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr2t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover24"><button class="cser2t4" id="slot24" onclick="passvalue('slot24')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr2t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover29"><button class="cser2t9" id="slot29" onclick="passvalue('slot29')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr2t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover25"><button class="cser2t5" id="slot25" onclick="passvalue('slot25')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr2t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">1:10</th>
-								<td data-header="Track 8" id="hover38"><button class="cser3t8" id="slot38" onclick="passvalue('slot38')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr3t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover34"><button class="cser3t4" id="slot34" onclick="passvalue('slot34')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr3t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover39"><button class="cser3t9" id="slot39" onclick="passvalue('slot39')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr3t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover35"><button class="cser3t5" id="slot35" onclick="passvalue('slot35')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr3t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">1:30</th>
-								<td data-header="Track 8" id="hover48"><button class="cser4t8" id="slot48" onclick="passvalue('slot48')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr4t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover44"><button class="cser4t4" id="slot44" onclick="passvalue('slot44')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr4t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover49"><button class="cser4t9" id="slot49" onclick="passvalue('slot49')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr4t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover45"><button class="cser4t5" id="slot45" onclick="passvalue('slot45')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr4t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">1:50</th>
-								<td data-header="Track 8" id="hover58"><button class="cser5t8" id="slot58" onclick="passvalue('slot58')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr5t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover54"><button class="cser5t4" id="slot54" onclick="passvalue('slot54')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr5t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover59"><button class="cser5t9" id="slot59" onclick="passvalue('slot59')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr5t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover55"><button class="cser5t5" id="slot55" onclick="passvalue('slot55')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr5t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">2:10</th>
-								<td data-header="Track 8" id="hover68"><button class="cser6t8" id="slot68" onclick="passvalue('slot68')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr6t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover64"><button class="cser6t4" id="slot64" onclick="passvalue('slot64')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr6t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover69"><button class="cser6t9" id="slot69" onclick="passvalue('slot69')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr6t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover65"><button class="cser6t5" id="slot65" onclick="passvalue('slot65')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr6t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">2:30</th>
-								<td data-header="Track 8" id="hover78"><button class="cser7t8" id="slot78" onclick="passvalue('slot78')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr7t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover74"><button class="cser7t4" id="slot74" onclick="passvalue('slot74')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr7t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover79"><button class="cser7t9" id="slot79" onclick="passvalue('slot79')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr7t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover75"><button class="cser7t5" id="slot75" onclick="passvalue('slot75')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr7t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">2:50</th>
-								<td data-header="Track 8" id="hover88"><button class="cser8t8" id="slot88" onclick="passvalue('slot88')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr8t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover84"><button class="cser8t4" id="slot84" onclick="passvalue('slot84')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr8t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover89"><button class="cser8t9" id="slot89" onclick="passvalue('slot89')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr8t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover85"><button class="cser8t5" id="slot85" onclick="passvalue('slot85')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr8t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 							<tr>
 								<th class="borderLess" scope="row" style="background-color: #efefef; color: #002856;">3:10</th>
-								<td data-header="Track 8" id="hover98"><button class="cser9t8" id="slot98" onclick="passvalue('slot98')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr9t8 companyNameC">&nbsp;</p>
+								<td data-header="Track 4" id="hover94"><button class="cser9t4" id="slot94" onclick="passvalue('slot94')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr9t4 companyNameC">&nbsp;</p>
 								</td>
-								<td data-header="Track 9" id="hover99"><button class="cser9t9" id="slot99" onclick="passvalue('slot99')" style="color: #FFBF3C;"></button>
-									<p class="cseorgr9t9 companyNameC">&nbsp;</p>
+								<td data-header="Track 5" id="hover95"><button class="cser9t5" id="slot95" onclick="passvalue('slot95')" style="color: #FFBF3C;"></button>
+									<p class="cseorgr9t5 companyNameC">&nbsp;</p>
 								</td>
 							</tr>
 						</tbody>
